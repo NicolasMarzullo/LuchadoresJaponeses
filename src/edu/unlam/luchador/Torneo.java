@@ -12,13 +12,11 @@ public class Torneo {
 		int[] resultado = new int[luchadores.length];
 		
 		for(int i = 0; i < this.luchadores.length; i++) {
-			for(int j = i; j< this.luchadores.length; j++) {
-				if(j != i) {
+			for(int j = i+1; j< this.luchadores.length; j++) {
 					if(luchadores[i].domina(luchadores[j]))
 						resultado[i] ++;
-					if(luchadores[j].domina(luchadores[i]))
+					else if(luchadores[j].domina(luchadores[i]))
 						resultado[j] ++;
-				}
 			}
 		}
 		
